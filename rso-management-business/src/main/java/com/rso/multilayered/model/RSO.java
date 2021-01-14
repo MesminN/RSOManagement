@@ -8,23 +8,23 @@ import java.util.Objects;
 
 public class RSO {
 
-    private int id;
+    private Integer id;
     private String name;
     private String address;
     private RsoStatus status;
     private String notes;
     private President president;
     private Advisor advisor;
-    private boolean isRenewed;
-    private boolean osRosterSubmitted;
-    private boolean isRoomReserved;
-    private boolean isOnWebsite;
-    private boolean isAddedToAdvocate;
+    private Boolean isRenewed;
+    private Boolean osRosterSubmitted;
+    private Boolean isRoomReserved;
+    private Boolean isOnWebsite;
+    private Boolean isAddedToAdvocate;
 
     public RSO() {
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
@@ -80,7 +80,7 @@ public class RSO {
         this.advisor = advisor;
     }
 
-    public boolean isRenewed() {
+    public Boolean isRenewed() {
         return isRenewed;
     }
 
@@ -88,7 +88,7 @@ public class RSO {
         isRenewed = renewed;
     }
 
-    public boolean isOsRosterSubmitted() {
+    public Boolean isOsRosterSubmitted() {
         return osRosterSubmitted;
     }
 
@@ -96,7 +96,7 @@ public class RSO {
         this.osRosterSubmitted = osRosterSubmitted;
     }
 
-    public boolean isRoomReserved() {
+    public Boolean isRoomReserved() {
         return isRoomReserved;
     }
 
@@ -104,7 +104,7 @@ public class RSO {
         isRoomReserved = roomReserved;
     }
 
-    public boolean isOnWebsite() {
+    public Boolean isOnWebsite() {
         return isOnWebsite;
     }
 
@@ -112,7 +112,7 @@ public class RSO {
         isOnWebsite = onWebsite;
     }
 
-    public boolean isAddedToAdvocate() {
+    public Boolean isAddedToAdvocate() {
         return isAddedToAdvocate;
     }
 
@@ -124,23 +124,22 @@ public class RSO {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof RSO)) return false;
-        RSO RSO = (RSO) o;
-        return getId() == RSO.getId() &&
-                isRenewed() == RSO.isRenewed() &&
-                isOsRosterSubmitted() == RSO.isOsRosterSubmitted() &&
-                isRoomReserved() == RSO.isRoomReserved() &&
-                isOnWebsite() == RSO.isOnWebsite() &&
-                isAddedToAdvocate() == RSO.isAddedToAdvocate() &&
-                getName().equals(RSO.getName()) &&
-                Objects.equals(getAddress(), RSO.getAddress()) &&
-                getStatus() == RSO.getStatus() &&
-                Objects.equals(getNotes(), RSO.getNotes()) &&
-                Objects.equals(getPresident(), RSO.getPresident()) &&
-                Objects.equals(getAdvisor(), RSO.getAdvisor());
+        RSO rso = (RSO) o;
+        return getId().equals(rso.getId()) &&
+                getName().equals(rso.getName()) &&
+                Objects.equals(getAddress(), rso.getAddress()) &&
+                getStatus() == rso.getStatus() &&
+                Objects.equals(getPresident(), rso.getPresident()) &&
+                Objects.equals(getAdvisor(), rso.getAdvisor()) &&
+                Objects.equals(isRenewed, rso.isRenewed) &&
+                Objects.equals(osRosterSubmitted, rso.osRosterSubmitted) &&
+                Objects.equals(isRoomReserved, rso.isRoomReserved) &&
+                Objects.equals(isOnWebsite, rso.isOnWebsite) &&
+                Objects.equals(isAddedToAdvocate, rso.isAddedToAdvocate);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId(), getName(), getAddress(), getStatus(), getNotes(), getPresident(), getAdvisor(), isRenewed(), isOsRosterSubmitted(), isRoomReserved(), isOnWebsite(), isAddedToAdvocate());
+        return Objects.hash(getId(), getName(), getAddress(), getStatus(), getPresident(), getAdvisor());
     }
 }

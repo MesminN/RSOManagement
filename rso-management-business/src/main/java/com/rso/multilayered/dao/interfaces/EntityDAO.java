@@ -15,8 +15,7 @@ public abstract class EntityDAO<T> {
     protected EntityManager entityManager;
     protected T entity;
 
-
-    public Optional<T> find(long key) {
+    public Optional<T> findByKey(long key) {
         return (Optional<T>) Optional.ofNullable(this.getEntityManager().find(this.getEntity().getClass(), key));
     }
 
