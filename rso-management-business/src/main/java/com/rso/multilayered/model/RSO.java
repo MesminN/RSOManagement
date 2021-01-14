@@ -6,7 +6,7 @@ import com.rso.multilayered.utils.RsoStatus;
 
 import java.util.Objects;
 
-public class RsoModel {
+public class RSO {
 
     private int id;
     private String name;
@@ -21,7 +21,7 @@ public class RsoModel {
     private boolean isOnWebsite;
     private boolean isAddedToAdvocate;
 
-    public RsoModel() {
+    public RSO() {
     }
 
     public int getId() {
@@ -123,20 +123,20 @@ public class RsoModel {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof RsoModel)) return false;
-        RsoModel rsoModel = (RsoModel) o;
-        return getId() == rsoModel.getId() &&
-                isRenewed() == rsoModel.isRenewed() &&
-                isOsRosterSubmitted() == rsoModel.isOsRosterSubmitted() &&
-                isRoomReserved() == rsoModel.isRoomReserved() &&
-                isOnWebsite() == rsoModel.isOnWebsite() &&
-                isAddedToAdvocate() == rsoModel.isAddedToAdvocate() &&
-                getName().equals(rsoModel.getName()) &&
-                Objects.equals(getAddress(), rsoModel.getAddress()) &&
-                getStatus() == rsoModel.getStatus() &&
-                Objects.equals(getNotes(), rsoModel.getNotes()) &&
-                Objects.equals(getPresident(), rsoModel.getPresident()) &&
-                Objects.equals(getAdvisor(), rsoModel.getAdvisor());
+        if (!(o instanceof RSO)) return false;
+        RSO RSO = (RSO) o;
+        return getId() == RSO.getId() &&
+                isRenewed() == RSO.isRenewed() &&
+                isOsRosterSubmitted() == RSO.isOsRosterSubmitted() &&
+                isRoomReserved() == RSO.isRoomReserved() &&
+                isOnWebsite() == RSO.isOnWebsite() &&
+                isAddedToAdvocate() == RSO.isAddedToAdvocate() &&
+                getName().equals(RSO.getName()) &&
+                Objects.equals(getAddress(), RSO.getAddress()) &&
+                getStatus() == RSO.getStatus() &&
+                Objects.equals(getNotes(), RSO.getNotes()) &&
+                Objects.equals(getPresident(), RSO.getPresident()) &&
+                Objects.equals(getAdvisor(), RSO.getAdvisor());
     }
 
     @Override
