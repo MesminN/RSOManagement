@@ -55,12 +55,11 @@ public class RSO {
         this.id = id;
     }
 
-    @NotNull
     public String getName() {
         return name;
     }
 
-    public void setName(@NotNull String name) {
+    public void setName(String name) {
         this.name = name;
     }
 
@@ -128,34 +127,30 @@ public class RSO {
         isAddedToAdvocate = addedToAdvocate;
     }
 
-    @NotNull
     public String getPresidentName() {
         return presidentName;
     }
 
-    public void setPresidentName(@NotNull String presidentName) {
+    public void setPresidentName(String presidentName) {
         this.presidentName = presidentName;
     }
 
-    @NotNull
     public String getPresidentAddress() {
         return presidentAddress;
     }
 
-    public void setPresidentAddress(@NotNull String presidentAddress) {
+    public void setPresidentAddress(String presidentAddress) {
         this.presidentAddress = presidentAddress;
     }
 
-    @NotNull
     public String getAdvisorName() {
         return advisorName;
     }
 
-    public void setAdvisorName(@NotNull String advisorName) {
+    public void setAdvisorName(String advisorName) {
         this.advisorName = advisorName;
     }
 
-    @NotNull
     public String getAdvisorAddress() {
         return advisorAddress;
     }
@@ -164,12 +159,11 @@ public class RSO {
         this.advisorAddress = advisorAddress;
     }
 
-    @NotNull
     public String getAdvisorTitle() {
         return advisorTitle;
     }
 
-    public void setAdvisorTitle(@NotNull String advisorTitle) {
+    public void setAdvisorTitle(String advisorTitle) {
         this.advisorTitle = advisorTitle;
     }
 
