@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/rsos")
+@RequestMapping("/rso")
 public class RSOController {
 
     @Autowired
