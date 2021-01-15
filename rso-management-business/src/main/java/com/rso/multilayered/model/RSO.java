@@ -2,12 +2,12 @@ package com.rso.multilayered.model;
 
 import com.rso.multilayered.utils.RsoStatus;
 import com.rso.multilayered.utils.StatusAgreement;
-import org.jetbrains.annotations.NotNull;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
 
 @Entity
 public class RSO {
@@ -15,24 +15,24 @@ public class RSO {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-    @NotNull("Name can't be null")
+    @NotNull(message = "Name can't be null")
     private String name;
     private String address;
     private RsoStatus status;
     private String notes;
 
     // President
-    @NotNull("President's name can't be null")
+    @NotNull(message = "President's name can't be null")
     private String presidentName;
-    @NotNull("President's email address can't be null")
+    @NotNull(message = "President's email address can't be null")
     private String presidentAddress;
 
     //Advisor
-    @NotNull("Advisor's name can't be null")
+    @NotNull(message = "Advisor's name can't be null")
     private String advisorName;
-    @NotNull("Advisor's email address can't be null")
+    @NotNull(message = "Advisor's email address can't be null")
     private String advisorAddress;
-    @NotNull("Advisor's title can't be null")
+    @NotNull(message = "Advisor's title can't be null")
     private String advisorTitle;
     private String advisorPhoneNumber;
     private StatusAgreement advisorStatusAgreement;
@@ -160,7 +160,7 @@ public class RSO {
         return advisorAddress;
     }
 
-    public void setAdvisorAddress(@NotNull String advisorAddress) {
+    public void setAdvisorAddress(String advisorAddress) {
         this.advisorAddress = advisorAddress;
     }
 
