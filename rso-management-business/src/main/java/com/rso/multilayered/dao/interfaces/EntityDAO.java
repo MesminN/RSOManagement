@@ -1,12 +1,12 @@
 package com.rso.multilayered.dao.interfaces;
 
-import org.jetbrains.annotations.NotNull;
 
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
+import javax.validation.constraints.NotNull;
 import java.util.List;
 import java.util.Optional;
 
